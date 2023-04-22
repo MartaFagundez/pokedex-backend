@@ -23,7 +23,7 @@ const { getPokemonsFromApi } = require('./src/controllers/pokemonsController.js'
 const { conn } = require('./src/db.js');
 
 require ("dotenv").config();
-const port = process.env.PORT;
+const port = process.env.PORT || 3001;
 
 // Sincronizar la base de datos con los modelos
 conn.sync({ force: true })
